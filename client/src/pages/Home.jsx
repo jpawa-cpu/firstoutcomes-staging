@@ -3,28 +3,24 @@ import Stat from '../components/Stat.jsx'
 
 const workflows = [
   {
-    title: 'Attribution & Eligibility',
-    desc: 'Roster reconciliation and accurate patient-to-plan assignment, kept current automatically.',
+    title: 'AI Call Center Agent',
+    desc: 'Handles inbound and outbound patient calls — scheduling, triage, and follow-up — without adding phone staff.',
   },
   {
-    title: 'Access & Scheduling',
-    desc: 'Patient outreach, appointment booking, and no-show recovery run around the clock.',
+    title: 'AI Annual Wellness Visit',
+    desc: 'Schedules patients for Annual Wellness Visit. Integrates with Population Health and Insurance Eligibility Lists.',
   },
   {
-    title: 'AI Outbound Referral Agent',
+    title: 'AI Advanced Dental Eligibility',
+    desc: 'Verifies dental eligibility and benefits in real time, so front-desk and billing teams stop guessing coverage.',
+  },
+  {
+    title: 'AI Outbound Referrals (PCMH)',
     desc: 'Steer referrals toward preferred, cost-effective in-network providers by default.',
   },
   {
-    title: 'Quality & Care Gap Closure',
-    desc: 'Identify and resolve preventive and chronic care gaps before they become missed measures.',
-  },
-  {
-    title: 'HCC, Risk & Documentation',
-    desc: 'Capture risk and complete documentation accurately, at a scale manual review can’t match.',
-  },
-  {
-    title: 'Prior Auth & Admin Follow-Up',
-    desc: 'Track authorizations and resolve administrative follow-up without staff chasing status.',
+    title: 'AI APCM',
+    desc: 'Delivers and documents the thirteen monthly APCM service elements automatically, from enrollment through attestation.',
   },
 ]
 
