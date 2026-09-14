@@ -10,8 +10,9 @@ const products = [
     desc: 'Patient outreach, appointment booking, and no-show recovery that runs continuously, without added staff.',
   },
   {
-    title: 'Referral & Network Routing',
+    title: 'AI Outbound Referral Agent',
     desc: 'Provider steering toward preferred, in-network, cost-effective care by default, at the point of referral.',
+    to: '/products/referral-agent',
   },
   {
     title: 'Quality & Care Gap Closure',
@@ -50,12 +51,34 @@ export default function Products() {
 
       <section className="border-t border-[var(--fo-line)] bg-[var(--fo-surface)]">
         <div className="mx-auto max-w-6xl px-6 py-20 grid gap-6 md:grid-cols-2">
-          {products.map((p) => (
-            <div key={p.title} className="rounded-xl bg-white border border-[var(--fo-line)] p-7">
-              <h2 className="text-[17px] font-semibold text-[var(--fo-ink)]">{p.title}</h2>
-              <p className="mt-2.5 text-[14.5px] text-[var(--fo-slate)] leading-relaxed">{p.desc}</p>
-            </div>
-          ))}
+          {products.map((p) => {
+            const Card = (
+              <>
+                <div className="flex items-center justify-between gap-3">
+                  <h2 className="text-[17px] font-semibold text-[var(--fo-ink)]">{p.title}</h2>
+                  {p.to && (
+                    <span className="text-[13px] font-medium text-[var(--fo-primary)] shrink-0">
+                      Learn more &rarr;
+                    </span>
+                  )}
+                </div>
+                <p className="mt-2.5 text-[14.5px] text-[var(--fo-slate)] leading-relaxed">{p.desc}</p>
+              </>
+            )
+            return p.to ? (
+              <Link
+                key={p.title}
+                to={p.to}
+                className="rounded-xl bg-white border border-[var(--fo-line)] p-7 hover:border-[var(--fo-primary)] transition-colors"
+              >
+                {Card}
+              </Link>
+            ) : (
+              <div key={p.title} className="rounded-xl bg-white border border-[var(--fo-line)] p-7">
+                {Card}
+              </div>
+            )
+          })}
         </div>
       </section>
 
