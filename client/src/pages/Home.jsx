@@ -11,7 +11,7 @@ const workflows = [
     desc: 'Patient outreach, appointment booking, and no-show recovery run around the clock.',
   },
   {
-    title: 'Referral & Network Routing',
+    title: 'AI Outbound Referral Agent',
     desc: 'Steer referrals toward preferred, cost-effective in-network providers by default.',
   },
   {
