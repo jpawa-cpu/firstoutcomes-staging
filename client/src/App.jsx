@@ -5,6 +5,7 @@ import Home from './pages/Home.jsx'
 import HowItWorks from './pages/HowItWorks.jsx'
 import Products from './pages/Products.jsx'
 import ReferralAgent from './pages/products/ReferralAgent.jsx'
+import APCM from './pages/products/APCM.jsx'
 import About from './pages/About.jsx'
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/referral-agent" element={<ReferralAgent />} />
+          <Route path="/products/apcm" element={<APCM />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </main>
