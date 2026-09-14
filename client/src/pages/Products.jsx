@@ -2,37 +2,26 @@ import { Link } from 'react-router-dom'
 
 const products = [
   {
-    title: 'Attribution & Eligibility',
-    desc: 'Automated roster reconciliation and patient-to-plan assignment so attribution stays accurate as rosters change.',
+    title: 'AI Call Center Agent',
+    desc: 'Handles inbound and outbound patient calls — scheduling, triage, and follow-up — without adding phone staff.',
   },
   {
-    title: 'Access & Scheduling',
-    desc: 'Patient outreach, appointment booking, and no-show recovery that runs continuously, without added staff.',
+    title: 'AI Annual Wellness Visit',
+    desc: 'Schedules patients for Annual Wellness Visit. Integrates with Population Health and Insurance Eligibility Lists.',
   },
   {
-    title: 'AI Outbound Referral Agent',
+    title: 'AI Advanced Dental Eligibility',
+    desc: 'Verifies dental eligibility and benefits in real time, so front-desk and billing teams stop guessing coverage.',
+  },
+  {
+    title: 'AI Outbound Referrals (PCMH)',
     desc: 'Provider steering toward preferred, in-network, cost-effective care by default, at the point of referral.',
     to: '/products/referral-agent',
   },
   {
-    title: 'Quality & Care Gap Closure',
-    desc: 'Preventive and chronic care gaps identified and resolved before they affect quality measures.',
-  },
-  {
-    title: 'HCC, Risk & Documentation',
-    desc: 'Risk capture and documentation completed accurately at a scale manual chart review cannot reach.',
-  },
-  {
-    title: 'Prior Auth & Admin Follow-Up',
-    desc: 'Authorization tracking and administrative resolution handled end-to-end, with less staff time chasing status.',
-  },
-  {
-    title: 'Episode & Transition Management',
-    desc: 'Discharge coordination and post-acute routing that keeps transitions of care from falling through the cracks.',
-  },
-  {
-    title: 'Exceptions & Escalations',
-    desc: 'Smart routing of exceptions to staff, with full context attached, so human review time goes where it matters.',
+    title: 'AI APCM',
+    desc: 'Delivers and documents the thirteen monthly APCM service elements automatically, from enrollment through attestation.',
+    to: '/products/apcm',
   },
 ]
 
@@ -44,7 +33,7 @@ export default function Products() {
           Products
         </h1>
         <p className="mt-6 text-[17px] text-[var(--fo-slate)] leading-relaxed">
-          Eight AI-driven workflows that cover the operational surface area of value-based care
+          AI-driven workflows that cover the operational surface area of value-based care
           &mdash; each one completing work, not just surfacing it.
         </p>
       </section>
