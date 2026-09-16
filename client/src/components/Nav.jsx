@@ -13,13 +13,8 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-[var(--fo-line)]">
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-[var(--fo-primary)] text-white text-sm font-semibold">
-            FO
-          </span>
-          <span className="text-[15px] font-semibold tracking-tight text-[var(--fo-ink)]">
-            First Outcomes
-          </span>
+        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <img src="/logo.png" alt="First Outcomes" className="h-8 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-[14.5px] text-[var(--fo-slate)]">
