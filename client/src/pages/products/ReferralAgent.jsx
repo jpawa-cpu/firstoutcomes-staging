@@ -213,10 +213,10 @@ export default function ReferralAgent() {
 
   return (
     <div>
-      {/* Hero */}
+            {/* Hero */}
       <section className="mx-auto max-w-4xl px-6 pt-20 pb-14 text-center">
         <span className="inline-block rounded-full bg-[var(--fo-primary-light)] px-3 py-1 text-[13px] font-medium text-[var(--fo-primary-dark)]">
-          Referral
+          Referrals
         </span>
         <h1 className="mt-6 text-4xl md:text-5xl font-semibold tracking-tight text-[var(--fo-ink)]">
           AI Outbound Referral Agent
@@ -224,16 +224,11 @@ export default function ReferralAgent() {
         <p className="mt-6 text-[17px] text-[var(--fo-slate)] leading-relaxed">
           VBC depends on patients visiting high quality, low cost specialists and imaging
           facilities. Human referral agents struggle to minimize referral leakage to
-          out-of-network, high-cost specialists.
+          out-of-network, high-cost specialists. The AI Outbound Referral Agent completes the
+          closed loop on every referral and meets all federal and state PCMH (Patient Centered
+          Medical Home) requirements, automating up to 98% of the work involved &mdash; including
+          prior auth requirements for outgoing referrals from PCPs to specialists.
         </p>
-        <ul className="mt-6 inline-flex flex-col gap-2.5 text-left">
-          {highlights.map((h) => (
-            <li key={h} className="flex gap-3 text-[15px] text-[var(--fo-slate)] leading-relaxed">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--fo-primary)]" />
-              {h}
-            </li>
-          ))}
-        </ul>
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <Link
             to="/about#contact"
