@@ -31,6 +31,7 @@ const steps = [
     subtitle: 'Consent, then the initiating visit',
     bullets: [
       'Voice-first outreach explains the program to the patient.',
+      'Enrolls the patient.',
       'Captures consent and documents it.',
       'Books the initiating visit.',
     ],
@@ -69,7 +70,7 @@ const steps = [
     title: 'Document and Attest',
     subtitle: 'The evidence CMS requires',
     bullets: [
-      'Maintains the living care plan CMS requires.',
+      'Maintains the active care plan CMS requires.',
       'Produces the monthly evidence behind every claim.',
     ],
   },
@@ -80,8 +81,8 @@ function StepVisual({ active }) {
     const rows = [
       { label: 'Medicare eligible', sub: 'Confirmed against panel data', done: true },
       { label: 'Chronic conditions counted', sub: '2+ qualifying conditions found', done: true },
-      { label: 'QMB status checked', sub: 'Cost-sharing rules applied', done: true },
-      { label: 'Level assigned', sub: 'APCM tier set for billing', done: false },
+      { label: 'QMB status checked', sub: 'Qualified Medicare Beneficiary — cost-sharing rules applied', done: true },
+      { label: 'Level assigned', sub: 'APCM tier set for enrollment', done: false },
     ]
     return (
       <div className="space-y-3">
@@ -105,7 +106,7 @@ function StepVisual({ active }) {
     )
   }
   if (active === 1) {
-    const flow = ['Outreach', 'Consent Captured', 'Visit Booked']
+    const flow = ['Outreach', 'Consent Captured', 'Initiating Visit', 'Visit Booked']
     return (
       <div className="space-y-6">
         <div className="text-[13px] font-semibold text-[var(--fo-slate)]">Enrollment Progress</div>
@@ -114,12 +115,12 @@ function StepVisual({ active }) {
             <div key={f} className="flex flex-1 items-center">
               <div className="flex flex-col items-center gap-2 flex-1">
                 <div
-                  className={`h-3 w-3 rounded-full ${i <= 1 ? 'bg-[var(--fo-primary)]' : 'bg-[var(--fo-line)]'}`}
+                  className={`h-3 w-3 rounded-full ${i <= 2 ? 'bg-[var(--fo-primary)]' : 'bg-[var(--fo-line)]'}`}
                 />
                 <span className="text-[11.5px] text-[var(--fo-slate)] text-center">{f}</span>
               </div>
               {i < flow.length - 1 && (
-                <div className={`h-px flex-1 -mt-6 ${i < 1 ? 'bg-[var(--fo-primary)]' : 'bg-[var(--fo-line)]'}`} />
+                <div className={`h-px flex-1 -mt-6 ${i < 2 ? 'bg-[var(--fo-primary)]' : 'bg-[var(--fo-line)]'}`} />
               )}
             </div>
           ))}
@@ -222,7 +223,7 @@ function StepVisual({ active }) {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[var(--fo-primary)]" /> Elements documented
           </div>
-          <div className="flex items-center gap-2 text-[var(--fo-slate)]">Living care plan current</div>
+          <div className="flex items-center gap-2 text-[var(--fo-slate)]">Active care plan current</div>
           <div className="flex items-center gap-2 text-[var(--fo-slate)]">Claim evidence generated</div>
         </div>
       </div>
@@ -261,9 +262,11 @@ export default function APCM() {
           AI APCM
         </h1>
         <p className="mt-6 text-[17px] text-[var(--fo-slate)] leading-relaxed">
-          APCM pays monthly only if thirteen service elements are delivered and documented every
-          month, for every enrolled patient. The challenge is throughput and evidence. The module
-          handles both.
+          Introduced in 2025 by CMS (the Centers for Medicare & Medicaid Services), Advanced
+          Primary Care Management improves patient outcomes and delivers up to $280,000 in extra
+          revenue per year for every 1,000 patients to practices. But APCM pays monthly only if
+          thirteen service elements are delivered and documented every month, for every enrolled
+          patient. The challenge is throughput and evidence. The module handles both.
         </p>
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <Link
@@ -278,20 +281,6 @@ export default function APCM() {
           >
             All Products
           </Link>
-        </div>
-      </section>
-
-      {/* What the module does */}
-      <section className="border-t border-[var(--fo-line)] bg-[var(--fo-surface)]">
-        <div className="mx-auto max-w-3xl px-6 py-16 text-center">
-          <h2 className="text-[13px] font-semibold uppercase tracking-wide text-[var(--fo-primary)]">
-            What the module does
-          </h2>
-          <p className="mt-4 text-[16px] text-[var(--fo-slate)] leading-relaxed">
-            APCM pays monthly only if thirteen service elements are delivered and documented every
-            month, for every enrolled patient. The challenge is throughput and evidence &mdash; the
-            module handles both, from identifying who qualifies through the attestation CMS requires.
-          </p>
         </div>
       </section>
 
@@ -377,7 +366,7 @@ export default function APCM() {
         <div className="mx-auto max-w-6xl px-6 py-14">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-14">
             <p className="text-white text-[19px] font-medium leading-snug max-w-xs text-center md:text-left">
-              A living care plan, worked every month &mdash; not a document sitting in the chart.
+              An active care plan, worked every month &mdash; not a document sitting in the chart.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 flex-1 w-full">
               {badges.map((b) => (
@@ -396,7 +385,7 @@ export default function APCM() {
       {/* CTA */}
       <section className="mx-auto max-w-3xl px-6 py-20 text-center">
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-[var(--fo-ink)]">
-          See AI APCM in action
+          See #1 AI APCM in action
         </h2>
         <p className="mt-4 text-[15.5px] text-[var(--fo-slate)] leading-relaxed">
           We&rsquo;ll show you exactly how it plugs into your current APCM workflow.
