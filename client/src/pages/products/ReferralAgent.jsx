@@ -3,24 +3,27 @@ import { Link } from 'react-router-dom'
 
 const problems = [
   'High referral leakage and lost specialty revenue.',
-  'Difficulty finding open specialist slots.',
-  'Inconsistent transition-of-care appointment completion.',
 ]
 
 const capabilities = [
+  'Finds the right specialist among provider panels or out-of-network specialist networks.',
   'Coordinates patient scheduling and specialist office follow-up.',
-  'Ensures that visits are scheduled in-network.',
   'Supports pre-exit follow-up scheduling before discharge or visit completion.',
 ]
 
+const highlights = [
+  'Completes closed loop referrals.',
+  'Meets all federal & state PCMH (Patient Centered Medical Home) requirements.',
+  'Automates up to 98% of all work, including prior auth requirements for outgoing referrals from PCPs to specialists.',
+]
+
 const outcomes = [
-  { value: 'Faster', label: 'Referrals' },
-  { value: 'Higher', label: 'In-network retention' },
-  { value: 'Better', label: 'TOC appointment completion' },
+  { value: '90%', label: 'Reduction in staff manual work' },
+  { value: '5x', label: 'Faster prior auth' },
+  { value: '200%', label: 'Increase in referrals closed' },
 ]
 
 const badges = [
-  { title: 'In-Network Referrals' },
   { title: 'Specialist Matching' },
   { title: 'TOC Follow-Up' },
   { title: 'Faster Closure' },
@@ -213,7 +216,7 @@ export default function ReferralAgent() {
       {/* Hero */}
       <section className="mx-auto max-w-4xl px-6 pt-20 pb-14 text-center">
         <span className="inline-block rounded-full bg-[var(--fo-primary-light)] px-3 py-1 text-[13px] font-medium text-[var(--fo-primary-dark)]">
-          Referral & Network Routing
+          Referral
         </span>
         <h1 className="mt-6 text-4xl md:text-5xl font-semibold tracking-tight text-[var(--fo-ink)]">
           AI Outbound Referral Agent
@@ -221,9 +224,16 @@ export default function ReferralAgent() {
         <p className="mt-6 text-[17px] text-[var(--fo-slate)] leading-relaxed">
           VBC depends on patients visiting high quality, low cost specialists and imaging
           facilities. Human referral agents struggle to minimize referral leakage to
-          out-of-network, high-cost specialists. First Outcomes handles end-to-end referral
-          workflows, including transition-of-care follow-up.
+          out-of-network, high-cost specialists.
         </p>
+        <ul className="mt-6 inline-flex flex-col gap-2.5 text-left">
+          {highlights.map((h) => (
+            <li key={h} className="flex gap-3 text-[15px] text-[var(--fo-slate)] leading-relaxed">
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--fo-primary)]" />
+              {h}
+            </li>
+          ))}
+        </ul>
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <Link
             to="/about#contact"
@@ -242,7 +252,7 @@ export default function ReferralAgent() {
 
       {/* Problem / capabilities */}
       <section className="border-t border-[var(--fo-line)] bg-[var(--fo-surface)]">
-        <div className="mx-auto max-w-5xl px-6 py-16 grid gap-10 md:grid-cols-2">
+        <div className="mx-auto max-w-5xl px-6 py-16 grid gap-10 md:grid-cols-2 items-start">
           <div className="rounded-xl bg-white border border-[var(--fo-line)] p-8">
             <h2 className="text-[13px] font-semibold uppercase tracking-wide text-[var(--fo-primary)]">
               Problem it solves
@@ -357,7 +367,7 @@ export default function ReferralAgent() {
               Every incomplete referral is a leakage event. First Outcomes turns referrals into
               completed VBC.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 flex-1 w-full">
+            <div className="grid grid-cols-3 gap-8 flex-1 w-full">
               {badges.map((b) => (
                 <div key={b.title} className="text-center">
                   <div className="mx-auto mb-2 h-10 w-10 rounded-full bg-white/15 flex items-center justify-center">
@@ -374,7 +384,7 @@ export default function ReferralAgent() {
       {/* CTA */}
       <section className="mx-auto max-w-3xl px-6 py-20 text-center">
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-[var(--fo-ink)]">
-          See the referral agent in action
+          See the #1 Referral Agent AI in action
         </h2>
         <p className="mt-4 text-[15.5px] text-[var(--fo-slate)] leading-relaxed">
           We&rsquo;ll show you exactly how it plugs into your current referral workflow.
