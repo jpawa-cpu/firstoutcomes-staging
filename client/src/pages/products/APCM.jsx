@@ -262,11 +262,13 @@ export default function APCM() {
           AI APCM
         </h1>
         <p className="mt-6 text-[17px] text-[var(--fo-slate)] leading-relaxed">
-          Introduced in 2025 by CMS (the Centers for Medicare & Medicaid Services), Advanced
-          Primary Care Management improves patient outcomes and delivers up to $280,000 in extra
-          revenue per year for every 1,000 patients to practices. But APCM pays monthly only if
-          thirteen service elements are delivered and documented every month, for every enrolled
-          patient. The challenge is throughput and evidence. The module handles both.
+          Introduced in 2025 by Centers for Medicare & Medicaid Services, Advanced
+          Primary Care Management improves patient outcomes and can deliver up to $280,000 in extra
+          revenue per year for every 1,000 patients to practices. 
+          
+          But APCM pays monthly only if thirteen service elements are delivered and documented 
+          every month, for every enrolledpatient. The challenge is throughput and evidence. 
+          Our AI Agent handles both.
         </p>
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <Link
