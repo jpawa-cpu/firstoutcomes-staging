@@ -5,11 +5,8 @@ export default function Footer() {
     <footer className="border-t border-[var(--fo-line)] bg-[var(--fo-surface)]">
       <div className="mx-auto max-w-6xl px-6 py-14 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-[var(--fo-primary)] text-white text-sm font-semibold">
-              FO
-            </span>
-            <span className="text-[15px] font-semibold text-[var(--fo-ink)]">First Outcomes</span>
+          <div className="mb-3">
+            <img src="/logo.png" alt="First Outcomes" className="h-8 w-auto" />
           </div>
           <p className="text-[14px] text-[var(--fo-slate)] max-w-sm leading-relaxed">
             The AI workforce for value-based care. Your tools find the work — our AI does the work.
