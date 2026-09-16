@@ -14,7 +14,7 @@ const capabilities = [
 const highlights = [
   'Completes closed loop referrals.',
   'Meets all federal & state PCMH (Patient Centered Medical Home) requirements.',
-  'Automates up to 98% of all work, including prior auth requirements for outgoing referrals from PCPs to specialists.',
+  'Automates up to 90% of all work, including prior auth requirements for outgoing referrals from PCPs to specialists.',
 ]
 
 const outcomes = [
