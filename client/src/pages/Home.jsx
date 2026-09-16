@@ -35,31 +35,50 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-24 text-center">
-        <span className="inline-block rounded-full bg-[var(--fo-primary-light)] px-3 py-1 text-[13px] font-medium text-[var(--fo-primary-dark)]">
-          AI Workforce for Value-Based Care
-        </span>
-        <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight text-[var(--fo-ink)] leading-[1.08]">
-          Your tools find the work.
-          <br className="hidden md:block" /> Our AI does the work.
-        </h1>
-        <p className="mt-6 max-w-2xl mx-auto text-[17px] md:text-lg text-[var(--fo-slate)] leading-relaxed">
-          First Outcomes turns the manual work queues buried inside value-based care &mdash;
-          outreach, documentation, referrals, care gaps &mdash; into completed actions, automatically.
-        </p>
-        <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-          <Link
-            to="/about#contact"
-            className="inline-flex items-center rounded-md bg-[var(--fo-primary)] px-6 py-3 text-[15px] font-medium text-white hover:bg-[var(--fo-primary-dark)] transition-colors"
-          >
-            Request an Assessment
-          </Link>
-          <Link
-            to="/how-it-works"
-            className="inline-flex items-center rounded-md border border-[var(--fo-line)] px-6 py-3 text-[15px] font-medium text-[var(--fo-ink)] hover:bg-[var(--fo-surface)] transition-colors"
-          >
-            See How It Works
-          </Link>
+      <section className="relative overflow-hidden">
+        <svg
+          className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[560px] w-full text-[var(--fo-primary-light)]"
+          viewBox="0 0 1440 560"
+          preserveAspectRatio="xMidYMin slice"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            fill="currentColor"
+            d="M0 0H1440V300C1440 300 1220 380 960 340C700 300 620 220 380 260C200 290 100 330 0 300V0Z"
+          />
+          <path
+            fill="currentColor"
+            opacity="0.55"
+            d="M0 40H1440V260C1440 260 1180 200 940 250C700 300 660 360 400 330C220 310 110 250 0 260V40Z"
+          />
+        </svg>
+        <div className="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-24 text-center">
+          <span className="inline-block rounded-full bg-[var(--fo-primary-light)] px-3 py-1 text-[13px] font-medium text-[var(--fo-primary-dark)]">
+            AI Workforce for Value-Based Care
+          </span>
+          <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight text-[var(--fo-ink)] leading-[1.08]">
+            Your tools find the work.
+            <br className="hidden md:block" /> Our AI does the work.
+          </h1>
+          <p className="mt-6 max-w-2xl mx-auto text-[17px] md:text-lg text-[var(--fo-slate)] leading-relaxed">
+            First Outcomes turns the manual work queues buried inside value-based care &mdash;
+            outreach, documentation, referrals, care gaps &mdash; into completed actions, automatically.
+          </p>
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+            <Link
+              to="/about#contact"
+              className="inline-flex items-center rounded-md bg-[var(--fo-primary)] px-6 py-3 text-[15px] font-medium text-white hover:bg-[var(--fo-primary-dark)] transition-colors"
+            >
+              Request an Assessment
+            </Link>
+            <Link
+              to="/how-it-works"
+              className="inline-flex items-center rounded-md border border-[var(--fo-line)] px-6 py-3 text-[15px] font-medium text-[var(--fo-ink)] hover:bg-white transition-colors"
+            >
+              See How It Works
+            </Link>
+          </div>
         </div>
       </section>
 
