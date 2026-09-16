@@ -45,7 +45,7 @@ const steps = [
     title: 'Authorize',
     subtitle: 'eRAF and prior auth',
     bullets: [
-      'Submit to the plan or IPA portal with the packet attached.',
+      'Submit the eRAF (referral authorization form) by plan or IPA portal, or by fax.',
       'Recheck and answer follow-ups until the auth posts.',
     ],
   },
