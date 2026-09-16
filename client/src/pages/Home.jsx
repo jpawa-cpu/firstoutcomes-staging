@@ -58,8 +58,8 @@ export default function Home() {
             AI Workforce for Value-Based Care
           </span>
           <h1 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight text-[var(--fo-ink)] leading-[1.08]">
-            Your tools find the work.
-            <br className="hidden md:block" /> Our AI does the work.
+            AI Workforce for
+            <br className="hidden md:block" /> Value-Based  Care.
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-[17px] md:text-lg text-[var(--fo-slate)] leading-relaxed">
             First Outcomes turns the manual work queues buried inside value-based care &mdash;
