@@ -222,9 +222,8 @@ export default function ReferralAgent() {
           AI Outbound Referral Agent
         </h1>
         <p className="mt-6 text-[17px] text-[var(--fo-slate)] leading-relaxed">
-          VBC depends on patients visiting high quality, low cost specialists and imaging
-          facilities. Human referral agents struggle to minimize referral leakage to
-          out-of-network, high-cost specialists. The AI Outbound Referral Agent completes the
+          Human referral agents struggle to minimize referral leakage to
+          out-of-network, high-cost specialists. Our AI Agent completes the
           closed loop on every referral and meets all federal and state PCMH (Patient Centered
           Medical Home) requirements, automating up to 98% of the work involved &mdash; including
           prior auth requirements for outgoing referrals from PCPs to specialists.
